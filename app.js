@@ -4,18 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
-const mongo = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017'
-mongo.connect(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}, (err, client) => {
-    if (err) {
-        console.error(err)
-        return
-    }
-    //...
-})
 
 const apiKey = '46513982';
 const apiSecret = 'd7d79d09ddfbcb962ca2879293281167f7bf1933';
