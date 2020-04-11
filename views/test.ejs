@@ -1,0 +1,35 @@
+<!-- views/partials/head.ejs -->
+<meta charset="UTF-8">
+<title>Super Awesome</title>
+
+<!-- CSS (load bootstrap from a CDN) -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/style.css">
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
+                EJS Is Fun
+            </a>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<body>
+<button onclick="createSession()">Create Session</button>
+<button onclick="joinSession()">Join Session</button>
+<button></button>
+<div id="videos">
+    <div id="subscriber"></div>
+    <div id="publisher"></div>
+</div>
+
+</body>
+<script src='https://static.opentok.com/v2/js/opentok.min.js'></script>
+<script src="/javascripts/index.js"></script>
