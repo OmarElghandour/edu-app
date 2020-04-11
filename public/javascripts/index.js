@@ -3,7 +3,7 @@ const apiKey = '46513982';
 
 
 async function createSession(){
-    fetch('http://localhost:3000/token',{
+    fetch('https://edu-app-omar.herokuapp.com/token',{
         method: 'GET',
         headers: {
             Accept: 'application/json',
