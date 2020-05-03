@@ -3,7 +3,7 @@ const apiKey = '46513982';
 
 
 async function createSession(){
-    fetch('https://edu-app-omar.herokuapp.com/token',{
+    fetch('http://localhost:3000/token',{
         method: 'GET',
         headers: {
             Accept: 'application/json',
@@ -20,7 +20,8 @@ async function createSession(){
 function joinSession() {
     var session = OT.initSession('46513982', localStorage.getItem('session'));
     session.on('streamCreated', function(event) {
-        console.log('sssss')
+        console.log(event);
+        // console.log('sssss')
         session.subscribe(event.stream, 'subscriber', {
             insertMode: 'append',
             width: '100%',
