@@ -43,14 +43,15 @@ router.post('/register', async (req, res) => {
 });
 
 router.post('/login' , async (req, res) => {
-    let user;
-    if(req.body.email){user = await Subscriber.findOne({email : req.body.email}); }
-    if(req.body.userName){user = await Subscriber.findOne({email : req.body.userName}); } 
+    const userName = await Subscriber.findOne({userName : req.body.credential}); 
+    const email = await Subscriber.findOne({email : req.body.credential}); 
+    let user = userName || email;
+    if(!user){return res.send({status : 'user name or email doesnt exist'})};
     const password = await bcrypt.compare(req.body.password,user.password);
     if (password){
-      return res.send('valid');
+      return res.send({status : 'valid credentials'});
     }
-   return res.send('not valid');
+   return res.send({status : 'valid credentials'});
 });
 
 

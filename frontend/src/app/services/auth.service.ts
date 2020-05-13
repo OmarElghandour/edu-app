@@ -14,7 +14,11 @@ export class AuthService {
   }
 
   registerUser(data) {
-    console.log(data);
    return this.http.post(API + 'register' , data , this.httpOptions);
   }
+
+  loginUser(data) {
+    return this.http.post(API + 'login' , data , this.httpOptions);
+   }
+ 
 }
