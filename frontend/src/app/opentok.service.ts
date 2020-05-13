@@ -2,10 +2,16 @@ import { Injectable } from '@angular/core';
 
 import * as OT from '@opentok/client';
 import config from '../config';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class OpentokService {
+  // Http Headers
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
 
   session: OT.Session;
   token: string;
@@ -25,18 +31,25 @@ export class OpentokService {
     return this.http.get('http://localhost:3000/token/allSessions');
   }
 
-
+  setinfo(){
+    return this.session = this.getOT().initSession(config.API_KEY, this.sessionId);
+  }
   async initSession(){
     if (this.sessionId && this.token) {
-      await fetch(config.SAMPLE_SERVER_BASE_URL + 'subscribe' ,{
-        method : 'POST',
-        mode: 'cors', // no-cors, *cors, same-origin
-        headers : {
-          'Content-Type': 'application/json'
-        },body : JSON.stringify({sessionId :this.sessionId , subscriberId : 56 })
-      }
-      );
-     return this.session = this.getOT().initSession(config.API_KEY, this.sessionId);
+   this.http.post(config.SAMPLE_SERVER_BASE_URL + 'subscribe', { sessionId: this.sessionId, subscriberId: 56 }, this.httpOptions).subscribe(data => {
+   });
+   return this.session = this.getOT().initSession(config.API_KEY, this.sessionId);
+
+
+    //   await fetch(config.SAMPL E_SERVER_BASE_URL + 'subscribe' ,{
+    //     method : 'POST',
+    //     mode: 'cors', // no-cors, *cors, same-origin
+        // headers : {
+        //   'Content-Type': 'application/json'
+        // },body : JSON.stringify({sessionId :this.sessionId , subscriberId : 56 })
+    //   }
+    //   );
+    //  return this.session = this.getOT().initSession(config.API_KEY, this.sessionId);
     }else {
       const data = await fetch(config.SAMPLE_SERVER_BASE_URL,{
         method: 'POST', // *GET, POST, PUT, DELETE, etc.

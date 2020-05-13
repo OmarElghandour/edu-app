@@ -32,11 +32,11 @@ router.post('/', function (req, res) {
 
 
 router.post('/subscribe' , async (req, res) => {
-  console.log(req.subscriberId)
   const session = await Session.findOne({session : req.body.sessionId});
+  console.log(session);
   session.sessionSubscribers.push(req.body.subscriberId);
   await session.save();
-  res.send('ssss');
+  res.send({status: 'ssss'});
 })
 router.get('/allSessions', async (req, res) => {
   try {
