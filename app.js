@@ -14,15 +14,10 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('connected to database'));
 
-
-const apiKey = '46513982';
-const apiSecret = 'd7d79d09ddfbcb962ca2879293281167f7bf1933';
-var OpenTok = require('opentok'),
-opentok = new OpenTok(apiKey, apiSecret);
-
 var subscribersRouter = require('./routes/subscriberApi');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var sessionApi = require('./routes/sessionApi');
 
 var app = express();
 
@@ -41,21 +36,7 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/subscribers', subscribersRouter);
-
-app.get('/token', function (req, res) {
-   opentok.createSession(function(err, session) {
-        if (err) return console.log(err);
-
-        // token =  opentok.generateToken(session.sessionId);
-
-// Generate a Token from a session object (returned from createSession)
-        token = session.generateToken();
-      res.send({
-          session : session.sessionId,
-          token : token,
-      })
-    });
-});
+app.use('/token',sessionApi)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

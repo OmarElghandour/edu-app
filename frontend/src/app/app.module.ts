@@ -14,6 +14,7 @@ import {AppRoutingModule} from "./app.routing";
 import { HeaderComponent } from './components/header/header.component';
 import { TeachersListingComponent } from './components/teachers-listing/teachers-listing.component';
 import { RegisterComponent } from './components/register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RegisterComponent } from './components/register/register.component';
         BrowserModule,
         ReactiveFormsModule,
         RouterModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule
     ],
   providers: [OpentokService],
   bootstrap: [AppComponent]

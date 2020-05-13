@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
     session: OT.Session;
     streams: Array<OT.Stream> = [];
     changeDetectorRef: ChangeDetectorRef;
-
+    sessions;
     constructor(private ref: ChangeDetectorRef, private opentokService: OpentokService) {
         this.changeDetectorRef = ref;
     }
@@ -35,8 +35,7 @@ export class HomeComponent implements OnInit {
                     this.changeDetectorRef.detectChanges();
                 }
             });
-        })
-            .then(() => this.opentokService.connect())
+        }).then(() => this.opentokService.connect())
             .catch((err) => {
                 console.error(err);
                 alert('Unable to connect. Make sure you have updated the config.ts file with your OpenTok details.');
@@ -44,4 +43,16 @@ export class HomeComponent implements OnInit {
 
     }
 
+    getSession() : void{
+        this.opentokService.getSessions().subscribe(data => {
+            this.sessions = data;
+            let lastSession = this.sessions[this.sessions.length -1];
+            console.log(lastSession)
+            this.opentokService.setSession(lastSession);
+            this.initSession();
+        })
+    }
+    JoinSession(){
+        this.getSession();
+    }
 }
