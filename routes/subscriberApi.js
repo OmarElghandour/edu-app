@@ -49,7 +49,7 @@ router.post('/login' , async (req, res) => {
     if(!user){return res.send({status : 'user name or email doesnt exist'})};
     const password = await bcrypt.compare(req.body.password,user.password);
     if (password){
-      return res.send({status : 'valid credentials'});
+      return res.send({status : 'valid credentials', userId : user._id});
     }
    return res.send({status : 'valid credentials'});
 });

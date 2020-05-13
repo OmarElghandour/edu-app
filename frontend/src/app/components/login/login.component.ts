@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
     this.authService.loginUser(userData).subscribe(data => {
       console.log(data);
       if(data['status'] === 'valid credentials'){
+        localStorage.setItem('user',data['userId']);
         this.router.navigate([''])
       }
     });

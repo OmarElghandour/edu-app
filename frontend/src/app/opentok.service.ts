@@ -36,7 +36,7 @@ export class OpentokService {
   }
   async initSession(){
     if (this.sessionId && this.token) {
-   this.http.post(config.SAMPLE_SERVER_BASE_URL + 'subscribe', { sessionId: this.sessionId, subscriberId: 56 }, this.httpOptions).subscribe(data => {
+   this.http.post(config.SAMPLE_SERVER_BASE_URL + 'subscribe', { sessionId: this.sessionId, subscriberId: localStorage.getItem('user') }, this.httpOptions).subscribe(data => {
    });
    return this.session = this.getOT().initSession(config.API_KEY, this.sessionId);
 
@@ -61,7 +61,7 @@ export class OpentokService {
         },
         redirect: 'follow', // manual, *follow, error
         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify({ createdBy: 42 }) // body data type must match "Content-Type" header
+        body: JSON.stringify({ createdBy: localStorage.getItem('user')}) // body data type must match "Content-Type" header
       });
       const json = await data.json();
       this.session = this.getOT().initSession(config.API_KEY, json.session);
