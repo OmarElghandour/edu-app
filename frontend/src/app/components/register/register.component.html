@@ -3,9 +3,8 @@
     <div class="side">
       <img src="../../../assets/undraw_job_offers_kw5d.svg" alt="">
     </div>
-
     <div class="form">
-      <form [formGroup]="registerForm">
+      <form [formGroup]="registerForm" (submit)="saveUser()">
         <h3>Get more things done with
            Loggin platform.
         </h3>
@@ -13,11 +12,11 @@
             Access to the most powerfull tool in the entire design and web industry.
         </p>
           <div class="control-field">
-              <input id="name" type="text" fomrControlName="userName" placeholder="Enter Your User Name">
+              <input id="name" type="text" formControlName="userName" placeholder="Enter Your User Name">
             </div>
 
             <div class="control-field">
-                <input type="text" id="email" fomrControlName="email" placeholder="Enter Your Email">
+                <input type="text" id="email" formControlName="email" placeholder="Enter Your Email">
               </div>
 
               <div class="control-field">

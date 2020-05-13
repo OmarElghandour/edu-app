@@ -30,7 +30,7 @@ router.post('/register', async (req, res) => {
     const emailExist = await Subscriber.findOne({email : req.body.email});
     if (emailExist) {return res.status(400).json('email is exist')}
     const subscriber = new Subscriber({
-        name : req.body.name,
+        userName : req.body.userName,
         email: req.body.email,
         password : hashedPassword
     });
@@ -43,7 +43,9 @@ router.post('/register', async (req, res) => {
 });
 
 router.post('/login' , async (req, res) => {
-    const user = await Subscriber.findOne({email : req.body.email});
+    let user;
+    if(req.body.email){user = await Subscriber.findOne({email : req.body.email}); }
+    if(req.body.userName){user = await Subscriber.findOne({email : req.body.userName}); } 
     const password = await bcrypt.compare(req.body.password,user.password);
     if (password){
       return res.send('valid');

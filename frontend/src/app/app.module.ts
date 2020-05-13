@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { TeachersListingComponent } from './components/teachers-listing/teachers-listing.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
         AppRoutingModule,
         HttpClientModule
     ],
-  providers: [OpentokService],
+  providers: [OpentokService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
