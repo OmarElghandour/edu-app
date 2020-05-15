@@ -33,7 +33,7 @@ router.post('/', function (req, res) {
 
 router.post('/subscribe' , async (req, res) => {
   const session = await Session.findOne({session : req.body.sessionId});
-  console.log(session);
+  console.log(req.body);
   session.sessionSubscribers.push(req.body.subscriberId);
   await session.save();
   res.send({status: 'ssss'});

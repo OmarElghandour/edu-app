@@ -16,6 +16,7 @@ import { TeachersListingComponent } from './components/teachers-listing/teachers
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
+import { ListLivesComponent } from './components/list-lives/list-lives.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AuthService } from './services/auth.service';
     HomeComponent,
     HeaderComponent,
     TeachersListingComponent,
-    RegisterComponent
+    RegisterComponent,
+    ListLivesComponent
   ],
     imports: [
         BrowserModule,
