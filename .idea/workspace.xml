@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f0c17c6-b40f-4670-a224-70997c9096ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/designs/bootstrap-login-form-1000x750.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/home/home.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/home/home.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/login/login.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/login/login.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/login/login.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/login/login.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/publisher/publisher.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/subscriber/subscriber.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/services/home.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/services/login.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/publisher/publisher.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.routing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/publisher/publisher.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/publisher/publisher.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/publisher/publisher.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/publisher/publisher.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/publisher/publisher.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/publisher/publisher.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/subscriber/subscriber.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/home/home.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/subscriber/subscriber.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/subscriber/subscriber.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/subscriber/subscriber.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/subscriber/subscriber.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/subscriber/subscriber.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/subscriber/subscriber.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/test/test-chrome-firefox-safari.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/.idea/test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/js/app.js" beforeDir="false" />
-    </list>
+    <list default="true" id="0f0c17c6-b40f-4670-a224-70997c9096ab" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,6 +66,7 @@
       <workItem from="1587622810168" duration="2696000" />
       <workItem from="1588411626200" duration="16271000" />
       <workItem from="1588475036936" duration="5919000" />
+      <workItem from="1589510285996" duration="340000" />
     </task>
     <servers />
   </component>
