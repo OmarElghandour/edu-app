@@ -3,7 +3,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {environment} from "../../environments/environment";
 
-const API = `${environment.baseApiUrl}/subscribers/`;
+const API = `${environment.baseApiUrl}subscribers/`;
 @Injectable()
 export class AuthService {
 
