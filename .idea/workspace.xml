@@ -2,6 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f0c17c6-b40f-4670-a224-70997c9096ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/dist/3rdpartylicenses.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/dist/assets/undraw_job_offers_kw5d.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/dist/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/dist/main.60068bd0a65217826d94.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/dist/polyfills.441ec331ad83ef272a19.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/dist/runtime.ec2944dd8b20ec099bf3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/dist/styles.08f0f618e98b0942a07e.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/opentok.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/opentok.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +40,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -70,7 +82,7 @@
       <workItem from="1588475036936" duration="5919000" />
       <workItem from="1589510285996" duration="5870000" />
       <workItem from="1589587208823" duration="47000" />
-      <workItem from="1589587375924" duration="1011000" />
+      <workItem from="1589587375924" duration="4371000" />
     </task>
     <servers />
   </component>
@@ -113,13 +125,13 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="207" y="31" width="1022" height="737" key="SettingsEditor/70.27.1296.741@70.27.1296.741" timestamp="1587623126925" />
-    <state x="366" y="133" width="797" height="560" key="find.popup" timestamp="1588477800355">
+    <state x="366" y="133" width="797" height="560" key="find.popup" timestamp="1589592639497">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="366" y="133" width="797" height="560" key="find.popup/70.27.1296.741@70.27.1296.741" timestamp="1588477800355" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1588477763511">
+    <state x="366" y="133" width="797" height="560" key="find.popup/70.27.1296.741@70.27.1296.741" timestamp="1589592639497" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1589592792055">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1588477763511" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1589592792055" />
   </component>
 </project>

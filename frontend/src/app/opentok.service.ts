@@ -17,10 +17,10 @@ export class OpentokService {
   token: string;
   sessionId: string;
   constructor(private http: HttpClient) { }
-  
+
   setSession(obj){
    this.sessionId = obj.session;
-   this.token = obj.token; 
+   this.token = obj.token;
    console.log(obj);
   }
 
@@ -38,6 +38,7 @@ export class OpentokService {
     if (this.sessionId && this.token) {
    this.http.post(config.SAMPLE_SERVER_BASE_URL + 'subscribe', { sessionId: this.sessionId, subscriberId: localStorage.getItem('user') }, this.httpOptions).subscribe(data => {
    });
+   console.log(config.API_KEY);
    return this.session = this.getOT().initSession(config.API_KEY, this.sessionId);
 
 
@@ -64,7 +65,8 @@ export class OpentokService {
         body: JSON.stringify({ createdBy: localStorage.getItem('user')}) // body data type must match "Content-Type" header
       });
       const json = await data.json();
-      this.session = this.getOT().initSession(config.API_KEY, json.session);
+        console.log(config.API_KEY);
+        this.session = this.getOT().initSession(config.API_KEY, json.session);
       this.token = json.token;
       return this.session;
 
