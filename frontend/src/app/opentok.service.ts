@@ -33,16 +33,12 @@ export class OpentokService {
   }
 
   setinfo(){
-    return this.session = this.getOT().initSession(config.API_KEY, this.sessionId);
+    return this.session = this.getOT().initSession(environment.openTokApi, this.sessionId);
   }
   async initSession(){
-      console.log(this.sessionId);
-      console.log(this.token);
     if (this.sessionId && this.token) {
-   this.http.post(environment.baseApiUrl + 'subscribe', { sessionId: this.sessionId, subscriberId: localStorage.getItem('user') }, this.httpOptions).subscribe(data => {
+   this.http.post(environment.baseApiUrl + 'token/subscribe', { sessionId: this.sessionId, subscriberId: localStorage.getItem('user') }, this.httpOptions).subscribe(data => {
    });
-        console.log('config.API_KEY');
-        console.log(config.API_KEY);
    return this.session = this.getOT().initSession(environment.openTokApi, this.sessionId);
 
 
@@ -69,11 +65,9 @@ export class OpentokService {
         body: JSON.stringify({ createdBy: localStorage.getItem('user')}) // body data type must match "Content-Type" header
       });
       const json = await data.json();
-        console.log(config.API_KEY);
-        this.session = this.getOT().initSession(environment.openTokApi, json.session);
+      this.session = this.getOT().initSession(environment.openTokApi, json.session);
       this.token = json.token;
       return this.session;
-
     }
   }
   connect() {
