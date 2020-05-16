@@ -12,7 +12,7 @@ router.post('/', function (req, res) {
     if (err) return console.log(err);
     // Generate a Token from a session object (returned from createSession)
     console.log(req.body);
-    token = session.generateToken();
+    let token = session.generateToken();
     const newSession = new Session({
       session: session.sessionId,
       token: token,
@@ -34,10 +34,10 @@ router.post('/', function (req, res) {
 router.post('/subscribe' , async (req, res) => {
   const session = await Session.findOne({session : req.body.sessionId});
   console.log(req.body);
-  session.sessionSubscribers.push(req.body.subscriberId);
+  session.sessionSubscribers.push({ userId : req.body.subscriberId});
   await session.save();
   res.send({status: 'ssss'});
-})
+});
 router.get('/allSessions', async (req, res) => {
   try {
     const allSessions = await Session.find();
@@ -45,8 +45,17 @@ router.get('/allSessions', async (req, res) => {
   } catch (e) {
     res.status(500).json({ message: e.message })
   }
-})
+});
+
+router.post('/userSessions', async (req, res) => {
+    console.log(req.body);
+    try {
+        const userSessions = await Session.find({"sessionSubscribers.userId": req.body.subscriberId});
+        res.json(userSessions);
+    } catch (e) {
+        res.status(500).json({ message: e.message })
+    }
+});
 
 
-
-module.exports = router
+module.exports = router;

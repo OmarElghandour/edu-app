@@ -55,4 +55,9 @@ export class HomeComponent implements OnInit {
     JoinSession(){
         this.getSession();
     }
+    mySessions(){
+        this.opentokService.getUserSessions(localStorage.getItem('user')).subscribe(sessions => {
+            console.log(sessions);
+        })
+    }
 }

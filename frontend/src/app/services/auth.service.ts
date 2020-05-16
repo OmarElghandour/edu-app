@@ -12,7 +12,7 @@ export class AuthService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
-  }
+  };
 
   registerUser(data) {
    return this.http.post(API + 'register' , data , this.httpOptions);

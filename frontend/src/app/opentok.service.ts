@@ -82,4 +82,7 @@ export class OpentokService {
       });
     });
   }
+  getUserSessions(subscriberId){
+     return  this.http.post(environment.baseApiUrl + 'token/userSessions',{subscriberId : subscriberId},this.httpOptions);
+  }
 }
