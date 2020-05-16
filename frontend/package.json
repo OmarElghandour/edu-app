@@ -3,15 +3,15 @@
   "description": "A basic video chat application using Angular.js 5 and OpenTok",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
-  "private": true,
+   "scripts": {
+        "ng": "ng",
+        "start": "node ../server.js",
+        "build": "ng build",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e",
+        "postinstall": "ng build --aot -prod"
+   },  "private": true,
   "dependencies": {
     "@angular/animations": "6.1.8",
     "@angular/common": "6.1.8",
@@ -48,5 +48,9 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "2.9.2"
-  }
+  },
+    "engines": {
+        "node": "6.11.0",
+        "npm": "3.10.10"
+    }
 }
