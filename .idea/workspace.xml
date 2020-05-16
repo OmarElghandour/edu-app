@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f0c17c6-b40f-4670-a224-70997c9096ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/opentok.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/opentok.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
       <workItem from="1588475036936" duration="5919000" />
       <workItem from="1589510285996" duration="5870000" />
       <workItem from="1589587208823" duration="47000" />
-      <workItem from="1589587375924" duration="8529000" />
+      <workItem from="1589587375924" duration="8801000" />
     </task>
     <servers />
   </component>
