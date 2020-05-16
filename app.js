@@ -41,7 +41,7 @@ app.get('/', function(req,res) {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/subscribers', subscribersRouter);
-app.use('/token',sessionApi)
+app.use('/token',sessionApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

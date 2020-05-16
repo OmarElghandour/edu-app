@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f0c17c6-b40f-4670-a224-70997c9096ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/angular-cli.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/opentok.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/opentok.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +77,7 @@
       <workItem from="1588475036936" duration="5919000" />
       <workItem from="1589510285996" duration="5870000" />
       <workItem from="1589587208823" duration="47000" />
-      <workItem from="1589587375924" duration="5209000" />
+      <workItem from="1589587375924" duration="7087000" />
     </task>
     <servers />
   </component>
@@ -113,13 +120,17 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="207" y="31" width="1022" height="737" key="SettingsEditor/70.27.1296.741@70.27.1296.741" timestamp="1587623126925" />
+    <state x="70" y="27" width="1272" height="684" key="dock-window-1" timestamp="1589596193516">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="70" y="27" width="1272" height="684" key="dock-window-1/70.27.1296.741@70.27.1296.741" timestamp="1589596193516" />
     <state x="366" y="133" width="797" height="560" key="find.popup" timestamp="1589594416201">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="366" y="133" width="797" height="560" key="find.popup/70.27.1296.741@70.27.1296.741" timestamp="1589594416201" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1589592792055">
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1589595899188">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1589592792055" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1589595899188" />
   </component>
 </project>

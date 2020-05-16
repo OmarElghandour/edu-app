@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import * as OT from '@opentok/client';
 import config from '../config';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {environment} from "../environments/environment";
 
 @Injectable()
 export class OpentokService {
@@ -28,18 +29,21 @@ export class OpentokService {
     return OT;
   }
   getSessions(){
-    return this.http.get('https://edu-app-omar.herokuapp.com/token/allSessions');
+    return this.http.get( environment.baseApiUrl + 'token/allSessions');
   }
 
   setinfo(){
     return this.session = this.getOT().initSession(config.API_KEY, this.sessionId);
   }
   async initSession(){
+      console.log(this.sessionId);
+      console.log(this.token);
     if (this.sessionId && this.token) {
    this.http.post(config.SAMPLE_SERVER_BASE_URL + 'subscribe', { sessionId: this.sessionId, subscriberId: localStorage.getItem('user') }, this.httpOptions).subscribe(data => {
    });
-   console.log(config.API_KEY);
-   return this.session = this.getOT().initSession(config.API_KEY, this.sessionId);
+        console.log('config.API_KEY');
+        console.log(config.API_KEY);
+   return this.session = this.getOT().initSession(environment.openTokApi, this.sessionId);
 
 
     //   await fetch(config.SAMPL E_SERVER_BASE_URL + 'subscribe' ,{
@@ -66,7 +70,7 @@ export class OpentokService {
       });
       const json = await data.json();
         console.log(config.API_KEY);
-        this.session = this.getOT().initSession(config.API_KEY, json.session);
+        this.session = this.getOT().initSession(environment.openTokApi, json.session);
       this.token = json.token;
       return this.session;
 
