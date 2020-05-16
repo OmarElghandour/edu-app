@@ -39,7 +39,7 @@ export class OpentokService {
       console.log(this.sessionId);
       console.log(this.token);
     if (this.sessionId && this.token) {
-   this.http.post(config.SAMPLE_SERVER_BASE_URL + 'subscribe', { sessionId: this.sessionId, subscriberId: localStorage.getItem('user') }, this.httpOptions).subscribe(data => {
+   this.http.post(environment.baseApiUrl + 'subscribe', { sessionId: this.sessionId, subscriberId: localStorage.getItem('user') }, this.httpOptions).subscribe(data => {
    });
         console.log('config.API_KEY');
         console.log(config.API_KEY);
