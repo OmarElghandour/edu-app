@@ -28,7 +28,7 @@ export class OpentokService {
     return OT;
   }
   getSessions(){
-    return this.http.get('http://localhost:3000/token/allSessions');
+    return this.http.get('https://edu-app-omar.herokuapp.com/token/allSessions');
   }
 
   setinfo(){
