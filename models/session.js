@@ -14,6 +14,15 @@ const sessionSchema = new mongoose.Schema({
         required: true,
         default: Date.now
     },
+    startAt: {
+        type: Date,
+        required: true,
+    },
+    active: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
     sessionOwner : {
         type: {},
         required: true,
