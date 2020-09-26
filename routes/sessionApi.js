@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const {v4 : uuidV4} = require('uuid');
+
 // const Session = require('../models/session');
 var OpenTok = require('opentok');
 const apiKey = '46513982';
@@ -8,24 +10,25 @@ opentok = new OpenTok(apiKey, apiSecret);
 const {Session , UserSession , User } = require("../sqlModels/inedx");
 // genrate new token
 router.post('/', function (req, res) {
-  opentok.createSession(async function (err, session) {
-    if (err) return console.log(err);
-    // Generate a Token from a session object (returned from createSession)
-    let token = session.generateToken();
+//   opentok.createSession(async function (err, session) {
+//     if (err) return console.log(err);
+//     // Generate a Token from a session object (returned from createSession)
+//     let token = session.generateToken();
+    console.log(req.body)
     Session.create({
-        session: session.sessionId,
-        token: token,
-        sessionOwner : req.body.createdBy
+        session: uuidV4(),
+        token: null,
+        sessionOwner : req.body.createdBy,
+        startAt : req.body.startAt
     }).then(session => {
         console.log('session :' + session.session);
         res.send({
             session: session.session,
-            token: token,
+            // token: token,
+        }).catch(err => {
+            res.status(500).json({ message: err });
         });
-    }).catch(err => {
-        res.status(500).send(err);
-    });
-  });
+    })
 });
 
 
@@ -52,6 +55,13 @@ router.post('/userSessions', async (req, res) => {
      .then(data => {res.send(data);})
      .catch(err => res.send(err));
 });
+
+router.get('/teacherSessions/:teacherId', async (req, res) => {
+    Session.findAll({where : {sessionOwner : req.params.teacherId }})
+     .then(data => {res.send(data);})
+     .catch(err => res.send(err));
+});
+
 router.post('/sessionUsers', async (req, res) => {
     Session.findAll({ where : {session : req.body.sessionId } , include: UserSession })
     .then(data => { res.send(data)})
