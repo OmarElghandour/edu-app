@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f0c17c6-b40f-4670-a224-70997c9096ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/routes/subscriberApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/subscriberApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/opentok.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/opentok.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/sessionApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/sessionApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +30,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ReactDashboard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
@@ -71,7 +76,6 @@
       <workItem from="1589510285996" duration="5870000" />
       <workItem from="1589587208823" duration="47000" />
       <workItem from="1589587375924" duration="9325000" />
-      <workItem from="1600206695410" duration="187000" />
     </task>
     <servers />
   </component>
@@ -83,9 +87,49 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="497" y="155" key="FileChooserDialogImpl" timestamp="1600206883275">
+    <state x="313" y="59" width="800" height="684" key="#Deployment" timestamp="1587622966749">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="497" y="155" key="FileChooserDialogImpl/70.27.1296.741/1366.0.1920.1080@70.27.1296.741" timestamp="1600206883275" />
+    <state x="313" y="59" width="800" height="684" key="#Deployment/70.27.1296.741@70.27.1296.741" timestamp="1587622966749" />
+    <state x="313" y="59" width="800" height="684" key="#Plugins" timestamp="1587622765587">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="313" y="59" width="800" height="684" key="#Plugins/70.27.1296.741@70.27.1296.741" timestamp="1587622765587" />
+    <state x="176" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587622874040">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="176" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1296.741@70.27.1296.741" timestamp="1587622874040" />
+    <state x="400" y="202" width="714" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588413839701">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="400" y="202" width="714" height="397" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1296.741@70.27.1296.741" timestamp="1588413839701" />
+    <state x="247" y="27" width="931" height="741" key="CommitChangelistDialog2" timestamp="1589603769060">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="247" y="27" width="931" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1589603769060" />
+    <state x="347" y="175" width="731" height="452" key="EditFileWatcherDialog" timestamp="1586582067407">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="347" y="175" width="731" height="452" key="EditFileWatcherDialog/70.27.1296.741@70.27.1296.741" timestamp="1586582067407" />
+    <state x="501" y="155" width="441" height="498" key="FileChooserDialogImpl" timestamp="1589518950410">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="501" y="155" width="441" height="498" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1589518950410" />
+    <state x="207" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1587623126925">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="207" y="31" width="1022" height="737" key="SettingsEditor/70.27.1296.741@70.27.1296.741" timestamp="1587623126925" />
+    <state x="70" y="27" width="1272" height="684" key="dock-window-1" timestamp="1589596193516">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="70" y="27" width="1272" height="684" key="dock-window-1/70.27.1296.741@70.27.1296.741" timestamp="1589596193516" />
+    <state x="366" y="133" width="797" height="560" key="find.popup" timestamp="1589594416201">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="366" y="133" width="797" height="560" key="find.popup/70.27.1296.741@70.27.1296.741" timestamp="1589594416201" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1589666509817">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1589666509817" />
   </component>
 </project>

@@ -57,16 +57,14 @@ router.post('/register', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-   
-    const userName = await User.findOne({ where: { name: req.body.credential }, limit: 1 , include: [UserProfile , UserCategory]}).catch(err => res.send(err));
-    console.log('line 62' + userName);
+    const userName = await User.findAll({ where: { name: req.body.credential }, limit: 1 , include: [UserProfile , UserCategory]}).catch(err => res.send(err));
 
-    const email = await User.findOne({ where: { name: req.body.credential }, limit: 1 }).catch(err => res.send(err));
+    const email = await User.findAll({ where: { name: req.body.credential }, limit: 1 }).catch(err => res.send(err));
     let user = userName || email;
     if (!user) { return res.send({ status: 'user name or email doesnt exist' }) }
-    const password = await bcrypt.compare(req.body.password, user.password);
+    const password = await bcrypt.compare(req.body.password, user[0].password);
     if (password) {
-        return res.send({ status: 'valid credentials', userId: user.id, role: user.role , user : user});
+        return res.send({ status: 'valid credentials', userId: user[0].id, role: user[0].role , user : user});
     }
     return res.send({ status: 'valid credentials' });
 });
@@ -97,7 +95,7 @@ router.post('/uploadImg', async (req, res) => {
     res.send({ img: img });
 })
 
-router.get('/userDetails/:id', async (req, res) => {
+router.get('/userDatails/:id', async (req, res) => {
     let userId = req.params.id
     const userData = await User.findOne({ where: { id : userId },attributes: ['id', 'name' , 'email' , 'role'] , include: [UserProfile , UserCategory]}).catch(err => res.send(err));
     res.send({userData});
@@ -135,7 +133,7 @@ router.post('/userProfile/update/:userId', async (req, res) => {
     }).catch(error => {
        return res.send(error);
     });
-    assignCategories(req.body.categories , req.params.userId);
+    // assignCategories(req.body.categories , req.params.userId);
 });
 
 function assignCategories(categories, userId) {
