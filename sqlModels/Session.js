@@ -1,4 +1,4 @@
-const {UserSession} = require("./inedx");
+const {UserSession} = require("./index");
 
 module.exports = (sequelize, type) => {
    return  sequelize.define('session', {

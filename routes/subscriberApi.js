@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const router = express.Router();
-const { User , UserProfile , UserCategory } = require("../sqlModels/inedx");
+const { User , UserProfile , UserCategory } = require("../sqlModels/index");
 const bcrypt = require('bcrypt');
 require('dotenv').config();
 const fs = require('fs');

@@ -18,6 +18,10 @@ const sessionApi = require('./routes/sessionApi');
 const categoryApi = require('./routes/Category');
 const userSockets = new Set();
 let roomUser = {};
+const dataBase = require('./sqlModels/index');
+
+
+dataBase.sequelize.sync();
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
@@ -44,9 +48,6 @@ app.get('/room/:roomId', function(req,res) {
   res.render('room' , {roomId : req.params.roomId});
 });
 
-
-// default options
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/subscribers', subscribersRouter);
@@ -57,9 +58,6 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-
-
-  
 
 io.on('connection', (socket) => {
   console.log('a user connected');
@@ -93,11 +91,8 @@ app.use(function(err, req, res, next) {
 });
 
 
-
-
-http.listen(5000, (port) => {
-  console.log(`listening on ${port}`);
-});
-
+app.listen(5000, (port) => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
 
 module.exports = app;

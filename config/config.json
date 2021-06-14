@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "omar@root",
-    "database": "dbtest",
+    "password": "Omar@2215",
+    "database": "edume_dev",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false

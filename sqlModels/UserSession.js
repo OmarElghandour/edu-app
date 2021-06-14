@@ -1,5 +1,5 @@
-const {User} = require("./inedx");
-const {Session} = require("./inedx");
+const {User} = require("./index");
+const {Session} = require("./index");
 module.exports = (sequelize, DataTypes) => {
     return sequelize.define('userSession', {
         id: {
@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
         session_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             unique: false,
             allowNull: false,
             references : {

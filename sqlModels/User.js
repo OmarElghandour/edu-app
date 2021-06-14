@@ -11,5 +11,5 @@ module.exports = (sequelize, type) => {
         role : type.STRING
     }, {
         freezeTableName: true
-    })
+    });
 };
