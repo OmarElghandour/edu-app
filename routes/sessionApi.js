@@ -1,5 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const faker = require('faker');
+const AccessToken = require('twilio').jwt.AccessToken;
+const VideoGrant = AccessToken.VideoGrant;
+
 // const Session = require('../models/session');
 var OpenTok = require('opentok');
 const apiKey = '46513982';
@@ -27,6 +31,45 @@ router.post('/', function (req, res) {
     });
   });
 });
+
+
+router.get('/twillio', function (request, response) {
+  let identity = faker.name.findName();
+  let token = new AccessToken(
+      process.env.TWILIO_ACCOUNT_SID,
+      process.env.TWILIO_API_KEY,
+      process.env.TWILIO_API_SECRET
+  );
+  token.identity = identity;
+  const grant = new VideoGrant();
+  // Grant token access to the Video API features
+  token.addGrant(grant);
+  // // Serialize the token to a JWT string and include it in a JSON response
+  response.send({
+      identity: identity,
+      token: token.toJwt()
+  });
+});
+
+router.post('/twillio', function (request, response) {
+  let token = new AccessToken(
+      process.env.TWILIO_ACCOUNT_SID,
+      process.env.TWILIO_API_KEY,
+      process.env.TWILIO_API_SECRET
+  );
+  console.log(request.body);
+  let room = request.body.room;
+  let identity = request.body.identity;
+  const grant = new VideoGrant({room});
+  // Grant token access to the Video API features
+  token.addGrant(grant);
+  token.identity = identity;
+  // // Serialize the token to a JWT string and include it in a JSON response
+
+  console.log(token.toJwt());
+  response.send({token :  token.toJwt()});
+});
+
 
 
 router.post('/subscribe', async (req, res) => {

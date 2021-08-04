@@ -5,9 +5,10 @@ module.exports = (sequelize, type) => {
             id: {
                 type: type.INTEGER,
                 primaryKey: true,
+                autoIncrement: true
             },
             session: type.STRING,
-            token: type.STRING,
+            token: type.TEXT,
             startAt: {
                 type: type.DATE,
                 allowNull: true

@@ -21,7 +21,7 @@ module.exports = {
                     allowNull: false,
                 },
                 token : {
-                    type : DataTypes.TEXT
+                    type : DataTypes.STRING
                 },
                 startAt : {
                     type : DataTypes.DATE
