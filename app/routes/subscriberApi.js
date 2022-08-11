@@ -59,10 +59,21 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
     const userName = await User.findAll({ where: { name: req.body.credential }, limit: 1 , include: [UserProfile , UserCategory]}).catch(err => res.send(err));
 
+
+    console.log('=========================');
+    console.log(await User.findAll());
+    console.log('=========================');
+
+
     const email = await User.findAll({ where: { name: req.body.credential }, limit: 1 }).catch(err => res.send(err));
     let user = userName || email;
+
+    console.log('=========================');
+    console.log(req.body);
+    console.log('=========================');
+
     if (!user) { return res.send({ status: 'user name or email doesnt exist' }) }
-    const password = await bcrypt.compare(req.body.password, user[0].password);
+    const password = await bcrypt.compare(req.body.password, user[0]?.password);
     if (password) {
         return res.send({ status: 'valid credentials', userId: user[0].id, role: user[0].role , user : user});
     }
