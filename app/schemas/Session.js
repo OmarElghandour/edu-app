@@ -7,17 +7,20 @@ module.exports = (sequelize, type) => {
                 primaryKey: true,
                 autoIncrement: true
             },
-            session: type.STRING,
-            token: type.TEXT,
-            startAt: {
-                type: type.DATE,
+            session:{ 
+                type : type.STRING,
                 allowNull: true
+            },
+            start_date: {
+                type: type.INTEGER,
+                allowNull: true,
+                type: 'unique',
             },
             active: {
                 type: type.BOOLEAN,
                 default: false
             },
-            sessionOwner: type.INTEGER
+            userId: type.INTEGER
         }, {
             freezeTableName: true
         });

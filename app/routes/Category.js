@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {Category } = require("../sqlModels/index");
+const {Category } = require("../schemas/index");
 
 /* GET users listing. */
 router.post('/crete', function (req, res, next) {

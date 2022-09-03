@@ -22,19 +22,34 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f0c17c6-b40f-4670-a224-70997c9096ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sqlModels/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="0f0c17c6-b40f-4670-a224-70997c9096ab" name="Default Changelist" comment="delete node modules">
+      <change afterPath="$PROJECT_DIR$/app/controllers/sessionController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/userController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/session.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/20220827120531-modify_start_date_enable_timestamp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/20200629030426-crate_session_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/20200629030426-crate_session_table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/20200801031232-add_role_user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/20200807235801-add-category-to-user-profile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/20200814223652-add_personal_info_userProfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/session.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/subscriber.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/tutorial.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/public/static/js/2.d62a572b.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/static/js/2.d62a572b.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/public/static/js/main.4387b2f6.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/static/js/main.4387b2f6.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/Category.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/Category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sessionApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sessionApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/subscriberApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/subscriberApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sqlModels/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sqlModels/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sqlModels/UserSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/UserSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sqlModels/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sqlModels/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sqlModels/userCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/userCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sqlModels/userprofile.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/userprofile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/sessionApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/sessionApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlModels/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/sqlModels/Session.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +62,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1aMyiYaUOrbAF8iXGB1tYVqbAeP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,26 +73,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/ReactDashboard" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/omar/projects/EduApp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/snap/phpstorm/289/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/schemas" />
       <recent name="$PROJECT_DIR$/frontend/src/app/components" />
       <recent name="$PROJECT_DIR$/frontend/src/app/services" />
       <recent name="$PROJECT_DIR$/frontend/src/app" />
@@ -109,6 +125,20 @@
       <workItem from="1627224814290" duration="698000" />
       <workItem from="1627225544732" duration="1811000" />
       <workItem from="1627227378885" duration="951000" />
+      <workItem from="1660187127800" duration="121000" />
+      <workItem from="1660191234506" duration="3180000" />
+      <workItem from="1660271987681" duration="135000" />
+      <workItem from="1660379242519" duration="3690000" />
+      <workItem from="1660409876616" duration="2313000" />
+      <workItem from="1660532767305" duration="38000" />
+      <workItem from="1661025356284" duration="388000" />
+      <workItem from="1661026304786" duration="3108000" />
+      <workItem from="1661543687471" duration="1957000" />
+      <workItem from="1661600489040" duration="5354000" />
+      <workItem from="1661643237316" duration="2750000" />
+      <workItem from="1662056966210" duration="2518000" />
+      <workItem from="1662117919762" duration="246000" />
+      <workItem from="1662229502450" duration="3070000" />
     </task>
     <task id="LOCAL-00001" summary="update app">
       <created>1623669620447</created>
@@ -140,28 +170,11 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update app" />
     <MESSAGE value="delete node modules" />
     <option name="LAST_COMMIT_MESSAGE" value="delete node modules" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1627228327697">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/1920.0.1366.768@72.27.1848.1053" timestamp="1627228327697" />
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1623601922786" />
-    <state x="687" y="292" width="618" height="522" key="find.popup" timestamp="1627225711142">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="687" y="292" width="618" height="522" key="find.popup/72.27.1848.1053/1920.0.1366.768@72.27.1848.1053" timestamp="1627225711142" />
-    <state x="410" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1627225980069">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="410" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053/1920.0.1366.768@72.27.1848.1053" timestamp="1627225980069" />
-    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.3214.1053@72.27.3214.1053" timestamp="1627225317163" />
   </component>
 </project>
