@@ -23,33 +23,93 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f0c17c6-b40f-4670-a224-70997c9096ab" name="Default Changelist" comment="delete node modules">
-      <change afterPath="$PROJECT_DIR$/app/controllers/sessionController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/userController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/session.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/20220827120531-modify_start_date_enable_timestamp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/DOCKERFILE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/dashboard/circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/dashboard/circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/dashboard/img_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/dashboard/img_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/dashboard/img_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/dashboard/img_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces-clipart/pic-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces-clipart/pic-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces-clipart/pic-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces-clipart/pic-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/faces/face9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/logo-mini.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/sprites/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/sprites/dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/sprites/flag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/sprites/green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/sprites/jsgrid-icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/sprites/red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/images/sprites/yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Participant.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/AddProduct.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/CustomForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/GuardedRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/MainContent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/PrivateRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/ScheduleSession.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/SideBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/TeacherSessions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/TeachersListing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/UserProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/VideoCall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/VideoCallClass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/haha.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/landing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/side-bar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/session.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/subscriber.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/tutorial.model.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/static/js/2.d62a572b.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/static/js/2.d62a572b.chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/static/js/main.4387b2f6.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/static/js/main.4387b2f6.chunk.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/Category.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/Category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/sessionApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sessionApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/subscriberApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/subscriberApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sqlModels/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/Session.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sqlModels/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sqlModels/UserSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/UserSession.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sqlModels/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sqlModels/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sqlModels/userCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/userCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sqlModels/userprofile.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/userprofile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +198,7 @@
       <workItem from="1661643237316" duration="2750000" />
       <workItem from="1662056966210" duration="2518000" />
       <workItem from="1662117919762" duration="246000" />
-      <workItem from="1662229502450" duration="3070000" />
+      <workItem from="1662229502450" duration="3764000" />
     </task>
     <task id="LOCAL-00001" summary="update app">
       <created>1623669620447</created>
