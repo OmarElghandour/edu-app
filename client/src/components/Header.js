@@ -17,13 +17,12 @@ const Header = () => {
       
         <nav className="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a className="navbar-brand brand-logo" href="index.html">
+          <Link to={'/'} className='navbar-brand brand-logo'>
             <img src="assets/images/logo.svg" alt="logo" />
-          </a>
+          </Link>
 
 
-
-          <a className="navbar-brand brand-logo-mini" href="index.html">
+          <a className="navbar-brand brand-logo-mini">
             <img src="assets/images/logo-mini.svg" alt="logo" />
           </a>
         </div>
@@ -66,10 +65,16 @@ const Header = () => {
                     </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">
+                  {/* <Dropdown.Item href="#/action-1">
                   <Link to={'/video-call/' + uuid()} >Create Room</Link>
 
+                  </Dropdown.Item> */}
+
+                  <Dropdown.Item href="#/action-1">
+                  <Link to={'/profile/'} >Profile</Link>
+
                   </Dropdown.Item>
+
                   <Dropdown.Item href="#/action-2">
                     <Link to={'/register/'} >register</Link>
                   </Dropdown.Item>

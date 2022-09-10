@@ -6,32 +6,6 @@ const SideBar = () => {
   return (
     <div className="col-md-4">
       <div className="side-bar">
-                  {/* <ul className="navbar-sidebar">
-            <li>
-              <Link to="/">
-                <FontAwesome name="fas fa-cog" size="2x" />
-                Dashboard 
-              </Link>
-            </li>
-            <li>
-              <Link to="/products">
-                <FontAwesome name="fas fa-cog" size="2x" />
-                Products 
-              </Link>
-            </li>
-
-
-            <li>
-              <Link to="/login">
-                <FontAwesome name="fas fa-cog" size="2x" />
-                login
-              </Link>
-            </li>
-          </ul> */}
-
-
-
-
           <div className="countries">
         <h4 className="title">Specialist</h4>
         <ul className="navbar-sidebar">

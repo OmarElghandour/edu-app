@@ -10,13 +10,15 @@ require('dotenv').config();
 const app = express();
 const router = require('./routes/router');
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ limit: '25mb', extended: false }));
+app.use(express.json({limit: '25mb'}));
 app.use(bodyParser.json());
 app.use(pino);
-app.use(express.json());
 app.use(cookieParser());
 app.use(fileUpload());
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
 const dataBase = require('./schemas/index');
 
 app.use(express.static(path.join( __dirname, '.' ,'public')))
@@ -33,9 +35,7 @@ app.listen(5000, async () => {
  await dataBase.sequelize.sync(
     {force : false}
   );
-
   console.log('db done');
-
 })
 
 

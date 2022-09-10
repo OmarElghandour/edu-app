@@ -58,10 +58,6 @@ const ScheduleSession = () => {
     let newArr = [...scheduleSessions]; // copying the old datas array
     const selectedSession = newArr.find(x => x.start_date === session.start_date);
     setScheduleSessions(newArr);
-    console.log('========================');
-    console.log(selectedSession.status);
-    console.log('========================');
-
     Axios.post(`${process.env.REACT_APP_SERVER_API}session/status`, {id: selectedSession.id, status : !selectedSession.status})
     .then(response => {
       console.log(response.data);
@@ -71,9 +67,12 @@ const ScheduleSession = () => {
 
   }
 
-  const addSession = () => {
+  const addSession = (newValue) => {
+    setStartDate(newValue);
+
     const sessionsList = [...scheduleSessions];
     const d = new Date(startDate.toISOString());
+    d.setSeconds(0,0);
     let dateWitoutTimeZone = d.toString().slice(0, 24);
     const currentUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (!sessionsList.includes(startDate)) {
@@ -100,6 +99,15 @@ const ScheduleSession = () => {
           }}
         />
       </LocalizationProvider>
+
+      <button
+        style={{ float: "right" }}
+        className="add btn btn-gradient-primary font-weight-bold todo-list-add-btn"
+        id="add-task"
+        onClick={() => addSession()}
+      >Add
+      </button>
+
 
       <div className="row">
         <div className="col-12 grid-margin">

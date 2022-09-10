@@ -27,7 +27,7 @@ function App() {
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
               <PrivateRoute path="/teachers-listing" exact component={TeachersListing} />
-              <PrivateRoute path="/userProfile" exact component={UserProfile} />
+              <PrivateRoute path="/profile" exact component={UserProfile} />
               <Route path={'/schedule-session'} exact component={ScheduleSession} />
               <Route path="/add-product" component={AddProduct} />
               <Route path="/video-call/:roomId" component={VideoCall} />

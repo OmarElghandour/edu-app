@@ -6,6 +6,14 @@ const userController = require('../controllers/userController');
 const bcrypt = require('bcrypt');
 require('dotenv').config();
 const fs = require('fs');
+const AWS = require("aws-sdk")
+const s3 = new AWS.S3({
+    accessKeyId: process.env.AWS_S3_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_S3_SECRET_ACCESS_KEY,
+})
+
+const multer  = require('multer')
+const upload = multer({ dest: 'uploads/' })
 
 const cloudinary = require('cloudinary').v2
 cloudinary.config({
@@ -43,12 +51,16 @@ router.get('/:id', async (req, res) => {
 
 const uploadImg = async (req, res) => {
     let imgUrl = '';
-    if (!req.files || Object.keys(req.files).length === 0) {
-        return res.status(400).send('No files were uploaded.');
-    }
+    // if (!req.files || Object.keys(req.files).length === 0) {
+    //     return res.status(400).send('No files were uploaded.');
+    // }
     const filePath = process.cwd() + '/public/images/' + req.files.img.name;
     const uniqueFilename = new Date().toISOString()
-    req.files.img.mv(filePath, function (err) { if (err) { return res.send(err) } });
+    await req.files.img.mv(filePath, function (err) {
+        if (err) {
+            return res.send(err)
+        }
+    });
     await cloudinary.uploader.upload(filePath, { public_id: `users/${uniqueFilename}`, tags: `users` },
         (err, image) => {
             if (err) return res.send(err)
@@ -62,9 +74,25 @@ const uploadImg = async (req, res) => {
     return imgUrl;
 }
 
-router.post('/uploadImg', async (req, res) => {
-    const img = await uploadImg(req, res);
-    res.send({ img: img });
+router.post('/uploadImg', upload.single('image'), async (req, res ) => {
+    // const img = await uploadImg(req, res);
+    const file = req.file
+
+
+    const fileStream = fs.createReadStream(file.path);
+
+
+    console.log(file);
+
+    const uploadParams = {
+        Bucket: process.env.AWS_S3_BUCKET_NAME,
+        Body: fileStream,
+        Key: file.filename
+    }
+
+   const result = await s3.upload(uploadParams).promise();
+    console.log(result);
+    // res.send({ img: img });
 })
 
 router.get('/userDetails/:id', async (req, res) => {
@@ -82,33 +110,42 @@ router.post('/userProfile/create/:userId', async (req, res) => {
         user_id: req.params.userId,
         category_id: 3    
     }).then(result => {
-       return res.send(result);
+        assignCategories(req.body.categories , req.params.userId);
+        return res.send(result);
     }).catch(error => {
        return res.send(error);
     });
-    assignCategories(req.body.categories , req.params.userId);
 });
 router.post('/userProfile/update/:userId', async (req, res) => {
     console.log(req.body);
     console.log(req.params.userId);
+
+    if (req.body.img) {
+        console.log(req.body.img)
+    }
     UserProfile.update({
         firstName : req.body.firstName,
         lastName : req.body.lastName,
         website : req.body.website,
         phoneNumber : req.body.phoneNumber,
         user_img: req.body.img,
-        category_id: 3    
+        category_id: 3
     },{
         where : {user_id : req.params.userId }
     }).then(result => {
-       return res.send(result);
+        assignCategories(req.body.categories , req.params.userId);
+        return res.send(result);
     }).catch(error => {
        return res.send(error);
     });
-    // assignCategories(req.body.categories , req.params.userId);
+    assignCategories(req.body.categories , req.params.userId);
 });
 
 function assignCategories(categories, userId) {
+    console.log("--------------------------");
+    console.log(categories);
+    console.log("--------------------------");
+
     for (let category of categories) {
         UserCategory.create({
             userId: userId,

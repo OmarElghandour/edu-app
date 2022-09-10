@@ -43,7 +43,13 @@ module.exports = (sequelize, Sequelize) => {
     sequelize,
     modelName: 'UserCategory',
     freezeTableName: true,
-    tableName: 'userCategory'
+    tableName: 'userCategory',
+    indexes: [
+      {
+        unique: true,
+        fields: ['userId', 'categoryId']
+      }
+     ]
   });
   return UserCategory;
 };

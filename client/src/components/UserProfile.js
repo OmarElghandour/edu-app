@@ -11,12 +11,13 @@ const UserProfile = () => {
         phoneNumber: "",
         user_img: "",
         website: "",
-        
-        userId : null,
+        userId: null,
         categories: []
     });
     const [defaultSkills, setDefaultSkills] = useState([]);
     const [skills, setSkills] = useState([]);
+    const [profileImage, setProfileImage] = useState("");
+
     const userId = JSON.parse(localStorage.getItem('loggedInUser')).userId;
     useEffect(() => {
         const fetchData = async () => {
@@ -27,7 +28,9 @@ const UserProfile = () => {
             fillFormData(userData);
         };
         const getCategories = async () => {
-            const res = await axios(`${process.env.REACT_APP_SERVER_API}category/`);
+            const res = await axios(`${process.env.REACT_APP_SERVER_API}categories/`);
+            console.log(res);
+
             setDefaultSkills(res.data);
         };
         fetchData();
@@ -47,12 +50,12 @@ const UserProfile = () => {
 
         setProfileForm({
             ...profileForm,
-            firstName: userData.firstName,
-            lastName: userData.lastName,
-            phoneNumber: userData.phoneNumber,
-            user_img: userData.user_img,
-            website: userData.website,
-            userId : userData.user_id
+            firstName: userData?.firstName,
+            lastName: userData?.lastName,
+            phoneNumber: userData?.phoneNumber,
+            user_img: userData?.user_img,
+            website: userData?.website,
+            userId: userData?.user_id
         });
     };
     const onButtonClick = () => {
@@ -71,20 +74,35 @@ const UserProfile = () => {
         const file = event.target.files[0];
         const reader = new FileReader();
         const url = reader.readAsDataURL(file);
+        console.log(file);
         reader.onloadend = () => {
-            setProfileForm({ ...profileForm, user_img: reader.result });
+            setProfileImage(reader.result);
+            setProfileForm({ ...profileForm, user_img: file });
         };
+
     };
+
+
+    async function postImage(image) {
+        const formData = new FormData();
+        formData.append("image", image)
+
+        const result = await axios.post(`${process.env.REACT_APP_SERVER_API}subscribers/uploadImg`, formData, { headers: { 'Content-Type': 'multipart/form-data' } });
+        console.log(result);
+        return result.data
+    }
+
+
     const updateUserProfile = () => {
         console.log(profileForm);
         let apiUrl = `${process.env.REACT_APP_SERVER_API}subscribers/userProfile/create/${userId}`;
-        if(profileForm.userId) {
-            apiUrl = `${process.env.REACT_APP_SERVER_API}subscribers/userProfile/update/${userId}`;                                                                                  
-        }   
+        if (profileForm.userId) {
+            apiUrl = `${process.env.REACT_APP_SERVER_API}subscribers/userProfile/update/${userId}`;
+        }
 
         axios.post(apiUrl, profileForm)
-        .then(response => console.log(response))
-        .catch(error => console.log(error));
+            .then(response => console.log(response))
+            .catch(error => console.log(error));
     };
 
     const submitForm = event => {
@@ -100,8 +118,8 @@ const UserProfile = () => {
                     <div className={'row'}>
 
                         <div className={'col-md-6'}>
-                            <img onClick={onButtonClick} width={'200px'} height={'200px'} src={profileForm.user_img} alt={''} />
-                            <input ref={imageUpload} name={'user_img'} value="" type='file' id='single' onChange={onImageUpload} />
+                            <img onClick={onButtonClick} width={'200px'} height={'200px'} src={profileImage} alt={''} />
+                            <input ref={imageUpload} name={'user_img'} value="" accept="image/*" type='file' id='single' onChange={onImageUpload} />
                             <div className="countries">
                                 <h4 className="title">Specialist</h4>
                                 <ul className="navbar-sidebar">
@@ -141,15 +159,7 @@ const UserProfile = () => {
                     </div>
                 </form>
             </div>
-            {/* <pre>
-        <code>
-          {profileForm && JSON.stringify(profileForm, null, 4)}
-          {profileForm && JSON.stringify(skills, null, 4)}
-          {profileForm && JSON.stringify(defaultSkills, null, 4)}
-        </code>
-      </pre> */}
         </div>
-
     );
 };
 export default UserProfile

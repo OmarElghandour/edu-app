@@ -12,9 +12,9 @@ module.exports = (sequelize, type) => {
                 allowNull: true
             },
             start_date: {
-                type: type.INTEGER,
-                allowNull: true,
-                type: 'unique',
+                type: 'TIMESTAMP',
+                allowNull: false,
+                unique: true
             },
             active: {
                 type: type.BOOLEAN,
