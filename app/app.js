@@ -15,7 +15,6 @@ app.use(express.json({limit: '25mb'}));
 app.use(bodyParser.json());
 app.use(pino);
 app.use(cookieParser());
-app.use(fileUpload());
 app.use(cors({
   origin: '*'
 }));

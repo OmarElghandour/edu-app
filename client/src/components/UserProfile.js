@@ -85,8 +85,8 @@ const UserProfile = () => {
 
     async function postImage(image) {
         const formData = new FormData();
-        formData.append("image", image)
-
+        formData.append("image", image);
+        formData.append("userId", profileForm.userId);
         const result = await axios.post(`${process.env.REACT_APP_SERVER_API}subscribers/uploadImg`, formData, { headers: { 'Content-Type': 'multipart/form-data' } });
         console.log(result);
         return result.data
@@ -94,7 +94,7 @@ const UserProfile = () => {
 
 
     const updateUserProfile = () => {
-        console.log(profileForm);
+        postImage(profileForm.user_img);
         let apiUrl = `${process.env.REACT_APP_SERVER_API}subscribers/userProfile/create/${userId}`;
         if (profileForm.userId) {
             apiUrl = `${process.env.REACT_APP_SERVER_API}subscribers/userProfile/update/${userId}`;
@@ -118,7 +118,7 @@ const UserProfile = () => {
                     <div className={'row'}>
 
                         <div className={'col-md-6'}>
-                            <img onClick={onButtonClick} width={'200px'} height={'200px'} src={profileImage} alt={''} />
+                            <img onClick={onButtonClick} width={'200px'} height={'200px'} src={profileImage ? profileImage : profileForm.user_img} alt={''} />
                             <input ref={imageUpload} name={'user_img'} value="" accept="image/*" type='file' id='single' onChange={onImageUpload} />
                             <div className="countries">
                                 <h4 className="title">Specialist</h4>

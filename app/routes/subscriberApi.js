@@ -10,17 +10,11 @@ const AWS = require("aws-sdk")
 const s3 = new AWS.S3({
     accessKeyId: process.env.AWS_S3_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_S3_SECRET_ACCESS_KEY,
-})
-
+});
 const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' })
 
-const cloudinary = require('cloudinary').v2
-cloudinary.config({
-    cloud_name: "edumeplatform",
-    api_key: "379531162563226",
-    api_secret: "Q3qYqphiEuv_arpOMntaysy4H3A"
-});
+router.post('/uploadImg', upload.single('image'), userController.uploadProfileImage);
 
 // Get all subscribers
 router.get('/', async (req, res) => {
@@ -47,53 +41,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// Create one subscriber
 
-const uploadImg = async (req, res) => {
-    let imgUrl = '';
-    // if (!req.files || Object.keys(req.files).length === 0) {
-    //     return res.status(400).send('No files were uploaded.');
-    // }
-    const filePath = process.cwd() + '/public/images/' + req.files.img.name;
-    const uniqueFilename = new Date().toISOString()
-    await req.files.img.mv(filePath, function (err) {
-        if (err) {
-            return res.send(err)
-        }
-    });
-    await cloudinary.uploader.upload(filePath, { public_id: `users/${uniqueFilename}`, tags: `users` },
-        (err, image) => {
-            if (err) return res.send(err)
-            fs.unlinkSync(filePath);
-            imgUrl = image.url;
-        }).catch(err => {
-            res.status(500).send({
-                status: 'faild'
-            });
-        })
-    return imgUrl;
-}
-
-router.post('/uploadImg', upload.single('image'), async (req, res ) => {
-    // const img = await uploadImg(req, res);
-    const file = req.file
-
-
-    const fileStream = fs.createReadStream(file.path);
-
-
-    console.log(file);
-
-    const uploadParams = {
-        Bucket: process.env.AWS_S3_BUCKET_NAME,
-        Body: fileStream,
-        Key: file.filename
-    }
-
-   const result = await s3.upload(uploadParams).promise();
-    console.log(result);
-    // res.send({ img: img });
-})
 
 router.get('/userDetails/:id', async (req, res) => {
     let userId = req.params.id
@@ -117,9 +65,6 @@ router.post('/userProfile/create/:userId', async (req, res) => {
     });
 });
 router.post('/userProfile/update/:userId', async (req, res) => {
-    console.log(req.body);
-    console.log(req.params.userId);
-
     if (req.body.img) {
         console.log(req.body.img)
     }
@@ -142,10 +87,6 @@ router.post('/userProfile/update/:userId', async (req, res) => {
 });
 
 function assignCategories(categories, userId) {
-    console.log("--------------------------");
-    console.log(categories);
-    console.log("--------------------------");
-
     for (let category of categories) {
         UserCategory.create({
             userId: userId,

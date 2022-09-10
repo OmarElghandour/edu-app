@@ -23,26 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f0c17c6-b40f-4670-a224-70997c9096ab" name="Default Changelist" comment="delete node modules">
-      <change afterPath="$PROJECT_DIR$/app/controllers/categoryController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/category.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/20220904000030-modify_user_category_indexes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/a05ff67e6c856fe560e5cd20795229aa" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/userController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/subscriberApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/subscriberApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/Session.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/userCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/userCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ScheduleSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ScheduleSession.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,21 +52,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/omar/projects/EduApp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/snap/phpstorm/289/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/omar/projects/EduApp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/phpstorm/289/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/schemas" />
@@ -137,6 +123,8 @@
       <workItem from="1662499042131" duration="170000" />
       <workItem from="1662499576187" duration="58000" />
       <workItem from="1662759890990" duration="5703000" />
+      <workItem from="1662840250444" duration="2649000" />
+      <workItem from="1662844318123" duration="3665000" />
     </task>
     <task id="LOCAL-00001" summary="update app">
       <created>1623669620447</created>

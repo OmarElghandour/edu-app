@@ -1,12 +1,15 @@
 
-const express = require("express");
-const app = express();
-const router = express.Router();
 const { User } = require("../schemas/index");
 const bcrypt = require('bcrypt');
 require('dotenv').config();
 const fs = require('fs');
-
+const {UserProfile} = require("../schemas");
+require('dotenv').config();
+const AWS = require("aws-sdk")
+const s3 = new AWS.S3({
+  accessKeyId: process.env.AWS_S3_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_S3_SECRET_ACCESS_KEY,
+});
 
  async function register(req, res) {
     const saltRounds = await bcrypt.genSalt(10);
@@ -33,11 +36,39 @@ async function login (req, res) {
         return res.status(200).send({ status: 'valid credentials', userId: user.id, role: user.role , user : user});
     }
     return res.status(401).send({ status: 'Invalid credentials' });
+}
 
+async function uploadProfileImage(req, res) {
+  const file = req.file
+  const fileStream = fs.createReadStream(file.path);
+  const userId = req.body.userId;
+  const fileName = file.originalname.replace(/\s/g, '');
+  const uploadParams = {
+    Bucket: process.env.AWS_S3_BUCKET_NAME,
+    Body: fileStream,
+    Key:  fileName
+  }
+  const userData = await UserProfile.findOne({ where: { user_id : userId },attributes: ['id', 'user_img']}).catch(err => res.send(err));
+  const userImage = userData.dataValues.user_img?.split('/').pop();
+  if (userImage !== fileName ) {
+    try {
+      const result = await s3.upload(uploadParams).promise();
+      await  UserProfile.update({
+        user_img : result.Location,
+      }, {
+        where: { user_id : userId }
+      });
+      res.send('user profile image Has been updated' );
+    } catch (err) {
+      res.send('image update failed with error' + err);
+    }
+  }
+  res.send('image Already Exist' );
 }
 
 
 module.exports = {
     register,
-    login
+    login,
+    uploadProfileImage
 }
