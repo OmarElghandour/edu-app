@@ -26,7 +26,7 @@ function App() {
               <Route path="/" exact component={MainContent} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
-              <PrivateRoute path="/teachers-listing" exact component={TeachersListing} />
+              <PrivateRoute path="/teachers" exact component={TeachersListing} />
               <PrivateRoute path="/profile" exact component={UserProfile} />
               <Route path={'/schedule-session'} exact component={ScheduleSession} />
               <Route path="/add-product" component={AddProduct} />

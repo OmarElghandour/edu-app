@@ -64,6 +64,7 @@ UserSession.belongsTo(Session , {foreignKey : 'session_id'});
 User.hasMany(UserCategory);
 UserCategory.belongsTo(User);
 
+UserCategory.belongsTo(Category , {foreignKey : 'categoryId'});
 
 db.User = User;
 db.Session = Session;

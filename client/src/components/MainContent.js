@@ -43,6 +43,19 @@ const MainContent = () => {
               <i className="mdi mdi-home menu-icon" />
             </a>
           </li>
+
+          <li className="nav-item">
+            <a className="nav-link" href="index.html">
+              <span className="menu-title">
+                <Link to={'teachers'}>
+                  Teachres
+                </Link>
+              </span>
+              <i className="mdi mdi-home menu-icon" />
+            </a>
+          </li>
+
+
         </ul>
       </nav>
       {/* partial */}

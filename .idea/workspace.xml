@@ -23,12 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f0c17c6-b40f-4670-a224-70997c9096ab" name="Default Changelist" comment="delete node modules">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/userController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/subscriberApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/subscriberApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/MainContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MainContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/TeachersListing.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TeachersListing.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +125,8 @@
       <workItem from="1662759890990" duration="5703000" />
       <workItem from="1662840250444" duration="2649000" />
       <workItem from="1662844318123" duration="3665000" />
+      <workItem from="1662862365750" duration="2071000" />
+      <workItem from="1662914228087" duration="3944000" />
     </task>
     <task id="LOCAL-00001" summary="update app">
       <created>1623669620447</created>
